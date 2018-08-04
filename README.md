@@ -61,7 +61,7 @@ Dijkstra算法和Floyd算法
  E     6+2=8          7          7
  F     6+3=9          ∞          9
 ```
-
+![image](https://github.com/ShaoQiBNU/The-shortest-path/blob/master/images/4.png)
 
 
 > 遍历集合V中与D直接相邻的顶点，找出当前与D距离最短的顶点。发现： D-->E 2  D-->F 3，于是将E加入S，并将E从V中移除。以E为中间点，更新dist中各节点的距离如下：
@@ -70,11 +70,21 @@ Dijkstra算法和Floyd算法
  B       -            -          5
  C       -            -          3
  D       -            -          6
- E     6+2=8          7          7
- F     6+3=9          ∞          9
+ E       -            -          7
+ F     7+5=12         9          9
 ```
+![image](https://github.com/ShaoQiBNU/The-shortest-path/blob/master/images/5.png)
 
-
+> 遍历集合V中与E直接相邻的顶点，找出当前与E距离最短的顶点。发现： E-->F 5，于是将F加入S，并将F从V中移除。以F为中间点，更新dist中各节点的距离如下：
+```
+节点  经过E的距离   不经过E的距离   dist
+ B       -            -          5
+ C       -            -          3
+ D       -            -          6
+ E       -            -          7
+ F       -            -          9
+```
+![image](https://github.com/ShaoQiBNU/The-shortest-path/blob/master/images/6.png)
 # 三. Floyd算法
 
 
