@@ -37,6 +37,7 @@ Dijkstra算法和Floyd算法
  E     3+4=7          ∞          7
  F       ∞            ∞          ∞
 ```
+
 ![image](https://github.com/ShaoQiBNU/The-shortest-path/blob/master/images/2.png)
 
 > 遍历集合V中与C直接相邻的顶点，找出当前与C距离最短的顶点。发现： C-->B 2   C-->D 3   C-->E 4，于是将B加入S，并将B从V中移除。以B为中间点，更新dist中各节点的距离如下：
@@ -48,6 +49,7 @@ Dijkstra算法和Floyd算法
  E       ∞            7          7
  F       ∞            ∞          ∞
 ```
+
 ![image](https://github.com/ShaoQiBNU/The-shortest-path/blob/master/images/3.png)
 
 > 遍历集合V中与B直接相邻的顶点，找出当前与B距离最短的顶点。发现： B-->D 5 ，于是将D加入S，并将D从V中移除。以D为中间点，更新dist中各节点的距离如下：
@@ -59,6 +61,7 @@ Dijkstra算法和Floyd算法
  E     6+2=8          7          7
  F     6+3=9          ∞          9
 ```
+
 ![image](https://github.com/ShaoQiBNU/The-shortest-path/blob/master/images/4.png)
 
 
@@ -71,6 +74,7 @@ Dijkstra算法和Floyd算法
  E       -            -          7
  F     7+5=12         9          9
 ```
+
 ![image](https://github.com/ShaoQiBNU/The-shortest-path/blob/master/images/5.png)
 
 > 遍历集合V中与E直接相邻的顶点，找出当前与E距离最短的顶点。发现： E-->F 5，于是将F加入S，并将F从V中移除。以F为中间点，更新dist中各节点的距离如下：
@@ -82,6 +86,7 @@ Dijkstra算法和Floyd算法
  E       -            -          7
  F       -            -          9
 ```
+
 ![image](https://github.com/ShaoQiBNU/The-shortest-path/blob/master/images/6.png)
 
 ## (四) 代码
@@ -336,18 +341,23 @@ int main () {
 ## (三) 图解过程
 
 > 初始化map和path，如图所示
+
 ![image](https://github.com/ShaoQiBNU/The-shortest-path/blob/master/images/7.png)
 
 > 以A为中间节点，更新map和path，此时没有更新项。以B为中间节点，更新map和path
+
 ![image](https://github.com/ShaoQiBNU/The-shortest-path/blob/master/images/8.png)
 
 > 以C为中间节点，更新map和path
+
 ![image](https://github.com/ShaoQiBNU/The-shortest-path/blob/master/images/9.png)
 
 > 以D为中间节点，更新map和path
+
 ![image](https://github.com/ShaoQiBNU/The-shortest-path/blob/master/images/10.png)
 
 > 以E为中间节点，更新map和path，此时没有更新项。以F为中间节点，更新map和path，此时没有更新项。
+
 ![image](https://github.com/ShaoQiBNU/The-shortest-path/blob/master/images/11.png)
 
 
