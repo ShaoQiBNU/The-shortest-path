@@ -334,10 +334,11 @@ int main () {
 > 对每一对顶点i和j，看看是否存在k，使得 map[i][k] + map[k][j] < map[i][j]，如果有，则更新map[i][j]；同时更新路径矩阵path[i][j]=path[i][k]。
 
 ## (三) 图解过程
+
 > 初始化map和path，如图所示
 ![image](https://github.com/ShaoQiBNU/The-shortest-path/blob/master/images/7.png)
 
-> 以A为中间节点，更新map和path，此时没有更新项。以B为中间节点，更新map和path，
+> 以A为中间节点，更新map和path，此时没有更新项。以B为中间节点，更新map和path
 ![image](https://github.com/ShaoQiBNU/The-shortest-path/blob/master/images/8.png)
 
 > 以C为中间节点，更新map和path
